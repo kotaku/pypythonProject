@@ -1,0 +1,43 @@
+﻿<Window x:Class="pypythonProject.PipetWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pypythonProject"
+        mc:Ignorable="d"
+        Cursor="Res\Cursor.cur"
+        WindowStyle="None" 
+        WindowState="Maximized"     
+        AllowsTransparency="True"        
+        Topmost="True"
+        ShowInTaskbar="False"
+        Background="Transparent"
+        BorderBrush="Red"
+        BorderThickness="8">
+    <Canvas Name="Plot" Background="#02000000" MouseMove="Plot_MouseMove"  MouseDown="Plot_MouseDown">
+        <Path Name="FalsePipet" Fill="#FF808080">
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Exclude">
+                    <CombinedGeometry.Geometry1>
+                        <GeometryGroup FillRule="EvenOdd">
+                            <EllipseGeometry RadiusX="110" RadiusY="110"/>
+                            <EllipseGeometry RadiusX="94" RadiusY="94"/>
+                        </GeometryGroup>
+                    </CombinedGeometry.Geometry1>
+                </CombinedGeometry>
+            </Path.Data>
+        </Path>
+        <Path Name="Pipet" Fill="Transparent">
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Exclude">
+                    <CombinedGeometry.Geometry1>
+                        <GeometryGroup FillRule="EvenOdd">
+                            <EllipseGeometry RadiusX="95" RadiusY="95"/>
+                            <EllipseGeometry RadiusX="75" RadiusY="75"/>
+                        </GeometryGroup>
+                    </CombinedGeometry.Geometry1>
+                </CombinedGeometry>
+            </Path.Data>
+        </Path>        
+    </Canvas>
+</Window>
